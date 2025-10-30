@@ -1,0 +1,257 @@
+/*style.css - dark elegant */
+/* ========== Variables ========== */
+:root {
+  --bg: #2067ae;
+  --panel: #426394;
+  --muted: #275298;
+  --accent: #7b61ff;
+  --accent-2: #5aa5ff;
+  --card: #041227;
+  --danger: #ff6b6b;
+}
+/* ========== Base ========== */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin : 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #110114;
+  background: linear-gradient(180deg, var(--bg) #e4e7eb 60%);
+  -webkit-fontosmothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrap {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========== Header ========== */
+.site-header {
+  background: var(--panel);
+  border-bottom: 1px solid rgba (255, 255, 255, 0.03);
+  padding: 18px 0;
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand h1 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--accent);
+}
+.brand .sub {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.nav a {
+  color: #eef2ff;
+  margin-left: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ========== Hero ========== */
+.hero {
+  height: 340px;
+  margin: 34px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+}
+.hero-inner {
+  text-align: center;
+}
+.hero h2 {
+  margin: 0 0 6px;
+  font-size: 36px;
+  color: #fff;
+}
+.lead {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* ========== About ========== */
+.about {
+  display: flex;
+  gap: 28px;
+  margin: 40px 0;
+  align-items: flex-start;
+}
+.about-left {
+  width: 220px;
+  text-align: center;
+}
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin-bottom: 12px;
+  object-fit: cover;
+  border-radius: 14px;
+  background: #bbecf4;
+}
+.about-right {
+  flex: 1;
+}
+.about-right h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+/* ========== Portofolio grid ========== */
+.section-title {
+  margin: 18px 0 12px;
+  font-size: 20px;
+  text-align: center;
+  color: var(--accent);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin-bottom: 40px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+.card-media img {
+  display: block;
+  width: 100px;
+  height: 180px;
+  object-fit: cover;
+}
+.card-media.noimg {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eac2de;
+  color:  var(--muted);
+}
+.card-body {
+  padding: 16px;
+}
+.card-body h4 {
+  margin: 0 0 8px;
+  color: #fff;
+}
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+.meta {
+  display: block;
+  margin-top: 12px;
+  color: #9aa6bb;
+  font-size: 13px;
+}
+
+/* ========== Contact ========== */
+.contact {
+  margin: 40px 0 80px;
+  text-align: center;
+}
+
+/* ========== Dashboard / Admin ========== */
+.dashboard .admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 20px 0 60px;
+}
+.panel {
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 16px;
+}
+.form-admin input [type="text"],
+.form-admin input textarea,
+.inline-form input [type="text"]
+.inline-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+  background: #fdd3f8;
+  color: #eaf1ff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.form-admin input[type="file"] {
+  margin-bottom: 10px;
+}
+.btn {
+  display: inline-block;
+  padding: 8px 18px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+.btn.small {
+  padding: 6px 8px;
+  font-size: 13px;
+}
+.btn.danger {
+  background: var(--danger);
+}
+.admin.tabele {
+  width: 100%;
+  border-collapse: collapse;
+  color: #eaf1ff;
+}
+.admin-table thead th {
+  background: #b9d5f2;
+  padding: 10px;
+  text-align: left;
+  font-size: 13px;
+}
+.admin-table td {
+  padding: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  vertical-align: top;
+}
+.img-col .thumb {
+  display: block;
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+.inline-form {
+  display: block;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 860px) {
+  .about {
+    flex-direction: column;
+  }
+  .dashboard .admin-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    height: 260px;
+  }
+  .hero h2 {
+    font-size: 28px;
+  }
+}
